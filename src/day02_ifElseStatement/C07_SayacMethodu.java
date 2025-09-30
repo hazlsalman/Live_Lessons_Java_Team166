@@ -1,0 +1,58 @@
+package day02_ifElseStatement;
+
+import java.util.Scanner;
+
+public class C07_SayacMethodu {
+
+    // kullanicidan 2 tam sayi alin
+    // 1- sayi1 < sayi2 ise "birinci sayi daha kucuk" yazdirin
+    // 2- sayi1 pozitif ise "birinci sayi sifirdan buyuk" yazdirin
+    // 3- sayi2 50'den buyuk ise "ikinci sayi 50'den buyuk" yazdirin
+    // 4- sayi2 5 ile bolunebiliyorsa "ikinci sayi 5'in tam kati" yazdirin
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Lutfen iki tam sayi giriniz:");
+        int sayi1 = scanner.nextInt();
+        int sayi2 = scanner.nextInt();
+
+        int sayac=0;
+        // 1- sayi1 < sayi2 ise "birinci sayi daha kucuk" yazdirin
+        if (sayi1 < sayi2) {
+            System.out.println("birinci sayi daha kucuk");
+            sayac++;
+        }
+
+        // 2- sayi1 pozitif ise "birinci sayi sifirdan buyuk" yazdirin
+        if (sayi1 > 0) {
+            System.out.println("birinci sayi sifirdan buyuk");
+            sayac++;
+        }
+
+        // 3- sayi2 50'den buyuk ise "ikinci sayi 50'den buyuk" yazdirin
+        if (sayi2 > 50) {
+            System.out.println("ikinci sayi 50'den buyuk");
+            sayac++;
+        }
+
+        // 4- sayi2 5 ile bolunebiliyorsa "ikinci sayi 5'in tam kati" yazdirin
+        if (sayi2 % 5 == 0) {
+            System.out.println("ikinci sayi 5'in tam kati");
+            sayac++;
+        }
+
+        // 5-EGER konsolda yukaridakilerden hicbiri yazdirilmazsa
+        //  "Nasil sayi sectiniz , hicbir sarti saglamiyor" yazdirin
+
+        // sayac en basta 0'di
+        // en sona geldiginde sayac 0,1,2,3 veya 4 olabilir
+        // sayac 0 ise yukaridaki dort maddeden HICBIRINI yazdirmamis demektir
+
+        if (sayac==0){
+            System.out.println("Nasil sayi sectiniz , hicbir sarti saglamiyor");
+        }
+
+
+
+    }
+}
